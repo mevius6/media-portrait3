@@ -1,0 +1,36 @@
+html {
+    font-size: 1em;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+}
+img {
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle; /* bottom */
+}
+
+@font-face {
+    font-family: "TIGR";
+    src: url("/fonts/tigr-regular.woff2") format("woff2");
+    src: url("/fonts/tigr-regular.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-display: fallback;
+}
+
