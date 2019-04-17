@@ -24,16 +24,6 @@ img {
     vertical-align: middle; /* bottom */
 }
 
-/*@font-face {
-    font-family: "TIGR";
-    src: url("/fonts/TIGR.woff2") format("woff2"),
-        url("/fonts/TIGR.woff") format("woff");
-    font-style: normal;
-    font-weight: normal;
-    font-stretch: normal;
-    font-display: fallback;
-}*/
-
 @font-face {
     font-family: "TIGR";
     src: url("/fonts/TIGR.woff2") format("woff2"),
