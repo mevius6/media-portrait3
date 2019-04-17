@@ -23,7 +23,7 @@ img {
     border-style: none;
     max-width: 100%;
     height: auto;
-    vertical-align: middle; /* bottom */
+    vertical-align: middle;
 }
 
 @font-face {
@@ -49,8 +49,8 @@ img {
 body {
     --color-bd: hsl(0, 0%, 100%);
     --color-hd: hsl(0, 0%, 93.7%);
-    --color-bg: hsl(0, 0%, 2.7%);
-    --fs-bs: 16px;
+    --color-bg: hsl(0, 0%, 0.7%); /* 2.7% */
+    --fs-bs: 1em;
     --fs-h1: 2.25em;
     --fs-h2: 1.5em;
     --col-max-w: 600px;
@@ -69,8 +69,15 @@ body {
     text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+    body {
+        --fs-h1: 1.5em;
+        --fs-h2: 1em;
+    }
+}
+
 p {
-    margin-bottom: 1.25em;
+    margin: 0 0 1.25em;
 }
 h1,
 h2 {
@@ -79,7 +86,9 @@ h2 {
     line-height: 1.15;
     color: var(--color-hd);
 }
-
+h2 {
+    font-size: var(--fs-h2);
+}
 .page__header {
     margin: 0 auto;
     max-width: var(--col-max-w);
@@ -88,7 +97,14 @@ h2 {
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    background: no-repeat center 60px / contain url(/img/1.jpg);
+    background: linear-gradient(0deg, var(--color-bg) 0%, transparent 100%),
+        no-repeat center 40px / contain url(/img/1.jpg);
+}
+
+@media screen and (min-width: 35em) {
+    .page__header {
+        background-position-y: 60px;
+    }
 }
 
 .page__header > .txt {
@@ -105,4 +121,19 @@ h2 {
 .content {
     margin: 0 auto;
     max-width: var(--col-max-w);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1em;
+}
+.content__img {
+    -webkit-mask-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(var(--color-bg)),
+        to(transparent)
+    );
+    mask-image: linear-gradient(180deg, var(--color-bg) 0%, transparent 100%);
 }
