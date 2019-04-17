@@ -5,17 +5,19 @@ html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 *,
 *:before,
 *:after {
-    margin: 0;
-    padding: 0;
-    border: 0;
     box-sizing: inherit;
 }
 body {
     margin: 0;
+}
+article,
+main {
+    display: block;
 }
 img {
     border-style: none;
@@ -25,9 +27,9 @@ img {
 }
 
 @font-face {
-    font-family: "TIGR";
-    src: url("/fonts/TIGR.woff2") format("woff2"),
-        url("/fonts/TIGR.woff") format("woff");
+    font-family: TIGR;
+    src: url(/fonts/TIGR.woff2) format("woff2"),
+        url(/fonts/TIGR.woff) format("woff");
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -35,9 +37,9 @@ img {
 }
 
 @font-face {
-    font-family: "Nostra";
-    src: url("/fonts/Nostra.woff2") format("woff2"),
-        url("/fonts/Nostra.woff") format("woff");
+    font-family: Nostra;
+    src: url(/fonts/Nostra.woff2) format("woff2"),
+        url(/fonts/Nostra.woff) format("woff");
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -46,13 +48,15 @@ img {
 
 body {
     --color-bd: hsl(0, 0%, 100%);
-    --color-bg: hsl(0, 0%, 0%);
+    --color-hd: hsl(0, 0%, 93.7%);
+    --color-bg: hsl(0, 0%, 2.7%);
     --fs-bs: 16px;
-    --fs-hd-1: 2.25em;
-    --fs-hd-2: 1.5em;
+    --fs-h1: 2.25em;
+    --fs-h2: 1.5em;
+    --col-max-w: 600px;
     min-height: 100vh;
     background-color: var(--color-bg);
-    font-family: "TIGR";
+    font-family: TIGR, sans-serif;
     font-weight: 400;
     line-height: 1.45;
     color: var(--color-bd);
@@ -62,23 +66,43 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 1.25em;
+}
+h1,
+h2 {
+    margin: 2.75rem 0 1rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--color-hd);
 }
 
 .page__header {
-    width: 100vw;
+    margin: 0 auto;
+    max-width: var(--col-max-w);
     height: 100vh;
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    background: no-repeat center 60px / contain url(/img/1.jpg);
 }
-.page__header > .img {
-    width: 100%;
-    height: inherit;
-    background: no-repeat center/38% url(/img/1.jpg);
-}
+
 .page__header > .txt {
-    font-size: var(--fs-hd-1);
-    text-align: center;
+    font-size: var(--fs-h1);
     text-transform: uppercase;
+    max-width: var(--col-max-w);
+    word-wrap: break-word;
+    color: var(--color-hd);
+}
+.page__header .txt span {
+    font-family: Nostra;
+}
+
+.content {
+    margin: 0 auto;
+    max-width: var(--col-max-w);
 }
