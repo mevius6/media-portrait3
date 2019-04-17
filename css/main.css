@@ -24,22 +24,71 @@ img {
     vertical-align: middle; /* bottom */
 }
 
-@font-face {
+/*@font-face {
     font-family: "TIGR";
-    src: url("/fonts/TIGR.woff2") format("woff2");
-    src: url("/fonts/TIGR.woff") format("woff");
+    src: url("/fonts/TIGR.woff2") format("woff2"),
+        url("/fonts/TIGR.woff") format("woff");
     font-style: normal;
     font-weight: normal;
     font-stretch: normal;
     font-display: fallback;
-}
+}*/
+
 @font-face {
-    font-family: "Nostra";
-    src: url(/fonts/Nostra.woff2) format("woff2");
-    src: url(/fonts/Nostra.woff) format("woff");
-    font-style: normal;
+    font-family: "TIGR";
+    src: url("/fonts/TIGR.woff2") format("woff2"),
+        url("/fonts/TIGR.woff") format("woff");
     font-weight: normal;
+    font-style: normal;
     font-stretch: normal;
     font-display: fallback;
 }
 
+@font-face {
+    font-family: "Nostra";
+    src: url("/fonts/Nostra.woff2") format("woff2"),
+        url("/fonts/Nostra.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: fallback;
+}
+
+body {
+    --color-bd: hsl(0, 0%, 100%);
+    --color-bg: hsl(0, 0%, 0%);
+    --fs-bs: 16px;
+    --fs-hd-1: 2.25em;
+    --fs-hd-2: 1.5em;
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    font-family: "TIGR";
+    font-weight: 400;
+    line-height: 1.45;
+    color: var(--color-bd);
+    -webkit-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern";
+    font-feature-settings: "kern";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.page__header {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.page__header > .img {
+    width: 100%;
+    height: inherit;
+    background: no-repeat center/38% url(/img/1.jpg);
+}
+.page__header > .txt {
+    font-size: var(--fs-hd-1);
+    text-align: center;
+    text-transform: uppercase;
+}
