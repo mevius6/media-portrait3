@@ -49,7 +49,7 @@ img {
 body {
     --color-bd: hsl(0, 0%, 100%);
     --color-hd: hsl(0, 0%, 93.7%);
-    --color-bg: hsl(0, 0%, 0.7%); /* 2.7% */
+    --color-bg: hsl(0, 0%, 0.7%);
     --fs-h1: 2.25em;
     --fs-h2: 1.5em;
     --col-max-w: 600px;
