@@ -88,6 +88,7 @@ h2 {
 h2 {
     font-size: var(--fs-h2);
 }
+
 .page__header {
     margin: 0 auto;
     max-width: var(--col-max-w);
@@ -95,34 +96,32 @@ h2 {
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     background: linear-gradient(
             0deg,
             var(--color-bg) 0%,
             transparent 50%,
             transparent 100%
         ),
-        no-repeat center 40px / contain url(/img/1.jpg);
+        no-repeat 50% / cover url(/img/1.jpg);
 }
 
-@media screen and (min-width: 35em) {
-    .page__header {
-        background-position-y: 60px;
-    }
-}
-
-.page__header > .txt {
+.page__header > .title {
     font-size: var(--fs-h1);
-    text-transform: uppercase;
     max-width: var(--col-max-w);
     word-wrap: break-word;
     color: var(--color-hd);
 }
-.page__header .txt span {
+.page__header .title span {
     font-family: Nostra;
+    color: var(--color-bd);
+}
+.page__header .title::first-line {
+    text-transform: uppercase;
+    color: var(--color-bd);
 }
 
-.content {
+.page__content {
     margin: 0 auto;
     max-width: var(--col-max-w);
     display: flex;
@@ -130,7 +129,33 @@ h2 {
     align-items: center;
     justify-content: center;
     padding: 0 1em;
+    border-width: 0 1px;
+    border-style: solid;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-source: none;
+    border-image-width: 1;
+    -moz-border-image: -moz-linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--color-bd) 50%,
+        transparent 100%
+    );
+    -webkit-border-image: -webkit-linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--color-bd) 50%,
+        transparent 100%
+    );
+    border-image: linear-gradient(
+        0deg,
+        transparent 0%,
+        var(--color-bd) 50%,
+        transparent 100%
+    );
+    border-image-slice: 1;
 }
+
 .content__img {
     -webkit-mask-image: -webkit-gradient(
         linear,
