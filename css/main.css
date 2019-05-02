@@ -37,9 +37,9 @@ img {
 }
 
 @font-face {
-    font-family: Nostra;
-    src: url(/fonts/Nostra.woff2) format("woff2"),
-        url(/fonts/Nostra.woff) format("woff");
+    font-family: Nostra-Stream;
+    src: url(/fonts/Nostra-Stream.woff2) format("woff2"),
+        url(/fonts/Nostra-Stream.woff) format("woff");
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -113,7 +113,7 @@ h2 {
     color: var(--color-hd);
 }
 .page__header .title span {
-    font-family: Nostra;
+    font-family: Nostra-Stream;
     color: var(--color-bd);
 }
 .page__header .title::first-line {
