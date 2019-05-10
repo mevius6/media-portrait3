@@ -1,29 +1,8 @@
-html {
-    font-size: 1em;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+html{font-size:1em;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;scroll-behavior:smooth}article,main{display:block}img{border-style:none;max-width:100%;height:auto;vertical-align:middle}
 *,
 *::before,
 *::after {
     box-sizing: inherit;
-}
-body {
-    margin: 0;
-}
-article,
-main {
-    display: block;
-}
-img {
-    border-style: none;
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
 }
 
 @font-face {
@@ -53,6 +32,7 @@ body {
     --fs-h1: 2.25em;
     --fs-h2: 1.5em;
     --col-max-w: 600px;
+    margin: 0;
     min-height: 100vh;
     background-color: var(--color-bg);
     font-family: TIGR, sans-serif;
