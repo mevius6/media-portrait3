@@ -88,12 +88,7 @@ h2 {
 	flex-flow: column;
 	align-items: center;
 	justify-content: flex-end;
-	background: linear-gradient(
-		0deg,
-		var(--color-bg) 0%,
-		transparent 50%,
-		transparent 100%),
-		no-repeat 50% / cover url(/img/1.jpg);
+	background: linear-gradient(0deg, var(--color-bg) 0%, transparent 50%, transparent 100%), no-repeat 50% / cover url(/img/1.jpg);
 }
 .page__header > .title {
 	font-size: var(--fs-h1);
@@ -159,10 +154,5 @@ h2 {
 		color-stop(50%, var(--color-bd)),
 		to(transparent)
 	);
-	mask-image: linear-gradient(
-		180deg,
-		var(--color-bg) 0%,
-		var(--color-bd) 50%,
-		transparent 100%
-	);
+	mask-image: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bd) 50%, transparent 100%);
 }
