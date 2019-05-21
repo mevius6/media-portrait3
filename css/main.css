@@ -2,175 +2,167 @@ html{font-size:1em;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-box-si
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 ::-moz-selection {
-    background: transparent;
-    color: inherit;
-    text-shadow: none;
+	background: transparent;
+	color: inherit;
+	text-shadow: none;
 }
 
 ::selection {
-    background: transparent;
-    color: inherit;
-    text-shadow: none;
+	background: transparent;
+	color: inherit;
+	text-shadow: none;
 }
 
 @font-face {
-    font-family: TIGR;
-    src: url(/fonts/TIGR.woff2) format("woff2"),
-        url(/fonts/TIGR.woff) format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    font-display: fallback;
+	font-family: TIGR;
+	src: url(/fonts/TIGR.woff2) format("woff2"), url(/fonts/TIGR.woff) format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: fallback;
 }
 
 @font-face {
-    font-family: Nostra-Stream;
-    src: url(/fonts/Nostra-Stream.woff2) format("woff2"),
-        url(/fonts/Nostra-Stream.woff) format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    font-display: fallback;
+	font-family: Nostra-Stream;
+	src: url(/fonts/Nostra-Stream.woff2) format("woff2"),
+		url(/fonts/Nostra-Stream.woff) format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	font-display: fallback;
 }
 
 body {
-    --color-bd: hsl(0, 0%, 100%);
-    --color-hd: hsl(0, 0%, 93.7%);
-    --color-bg: hsl(0, 0%, 0.7%);
-    --fs-h1: 2.25em;
-    --fs-h2: 1.5em;
-    --col-max-w: 600px;
-    margin: 0;
-    min-height: 100vh;
-    background-color: var(--color-bg);
-    font-family: TIGR, sans-serif;
-    font-weight: 400;
-    line-height: 1.45;
-    color: var(--color-bd);
-    -webkit-font-feature-settings: "kern";
-    -moz-font-feature-settings: "kern";
-    font-feature-settings: "kern";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    text-align: center;
+	--color-bd: hsl(0, 0%, 100%);
+	--color-hd: hsl(0, 0%, 93.7%);
+	--color-bg: hsl(0, 0%, 0.7%);
+	--fs-h1: 2.25em;
+	--fs-h2: 1.5em;
+	--col-max-w: 600px;
+	margin: 0;
+	min-height: 100vh;
+	background-color: var(--color-bg);
+	font-family: TIGR, sans-serif;
+	font-weight: 400;
+	line-height: 1.45;
+	color: var(--color-bd);
+	-webkit-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern";
+	font-feature-settings: "kern";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	text-align: center;
 }
 
 @media screen and (max-width: 600px) {
-    body {
-        --fs-h1: 1.5em;
-        --fs-h2: 1em;
-    }
+	body {
+		--fs-h1: 1.5em;
+		--fs-h2: 1em;
+	}
 }
 
 p {
-    margin: 0 0 1.25em;
+	margin: 0 0 1.25em;
 }
 h1,
 h2 {
-    margin: 2.75rem 0 1rem;
-    font-weight: 400;
-    line-height: 1.15;
-    color: var(--color-hd);
+	margin: 2.75rem 0 1rem;
+	font-weight: 400;
+	line-height: 1.15;
+	color: var(--color-hd);
 }
 h2 {
-    font-size: var(--fs-h2);
+	font-size: var(--fs-h2);
 }
 
 .page__header {
-    margin: 0 auto;
-    max-width: var(--col-max-w);
-    height: 100vh;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: flex-end;
-    background: linear-gradient(
-            0deg,
-            var(--color-bg) 0%,
-            transparent 50%,
-            transparent 100%
-        ),
-        no-repeat 50% / cover url(/img/1.jpg);
+	margin: 0 auto;
+	max-width: var(--col-max-w);
+	height: 100vh;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: flex-end;
+	background: linear-gradient(
+		0deg,
+		var(--color-bg) 0%,
+		transparent 50%,
+		transparent 100%),
+		no-repeat 50% / cover url(/img/1.jpg);
 }
-
 .page__header > .title {
-    font-size: var(--fs-h1);
-    max-width: var(--col-max-w);
-    word-wrap: break-word;
-    color: var(--color-hd);
+	font-size: var(--fs-h1);
+	max-width: var(--col-max-w);
+	word-wrap: break-word;
+	color: var(--color-hd);
 }
 .page__header .title span {
-    font-family: Nostra-Stream;
-    color: var(--color-bd);
+	font-family: Nostra-Stream;
+	color: var(--color-bd);
 }
 .page__header .title::first-line {
-    text-transform: uppercase;
-    color: var(--color-bd);
+	text-transform: uppercase;
+	color: var(--color-bd);
 }
 
 .page__content {
-    margin: 0 auto;
-    max-width: var(--col-max-w);
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1em;
-    border-width: 0 1px;
-    border-style: solid;
-    -moz-border-image: -moz-linear-gradient(
-        90deg,
-        transparent 0%,
-        var(--color-bd) 50%,
-        transparent 100%
-    );
-    -webkit-border-image: -webkit-linear-gradient(
-        90deg,
-        transparent 0%,
-        var(--color-bd) 50%,
-        transparent 100%
-    );
-    border-image: linear-gradient(
-        0deg,
-        transparent 0%,
-        var(--color-bd) 50%,
-        transparent 100%
-    );
-    border-image-slice: 1;
+	margin: 0 auto;
+	max-width: var(--col-max-w);
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 1em;
+	border-width: 0 1px;
+	border-style: solid;
+	-moz-border-image: -moz-linear-gradient(
+		90deg,
+		transparent 0%,
+		var(--color-bd) 50%,
+		transparent 100%
+	);
+	-webkit-border-image: -webkit-linear-gradient(
+		90deg,
+		transparent 0%,
+		var(--color-bd) 50%,
+		transparent 100%
+	);
+	border-image: linear-gradient(0deg, transparent 0%, var(--color-bd) 50%, transparent 100%);
+	border-image-slice: 1;
 }
 
 .content__img {
-    -webkit-mask-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(var(--color-bg)),
-        color-stop(50%, var(--color-bd)),
-        to(transparent)
-    );
-    -webkit-mask-image: -webkit-linear-gradient(
-        top,
-        var(--color-bg) 0%,
-        var(--color-bd) 50%,
-        transparent 100%
-    );
-    mask-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(var(--color-bg)),
-        color-stop(50%, var(--color-bd)),
-        to(transparent)
-    );
-    mask-image: linear-gradient(
-        180deg,
-        var(--color-bg) 0%,
-        var(--color-bd) 50%,
-        transparent 100%
-    );
+	-webkit-mask-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(var(--color-bg)),
+		color-stop(50%, var(--color-bd)),
+		to(transparent)
+	);
+	-webkit-mask-image: -webkit-linear-gradient(
+		top,
+		var(--color-bg) 0%,
+		var(--color-bd) 50%,
+		transparent 100%
+	);
+	mask-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(var(--color-bg)),
+		color-stop(50%, var(--color-bd)),
+		to(transparent)
+	);
+	mask-image: linear-gradient(
+		180deg,
+		var(--color-bg) 0%,
+		var(--color-bd) 50%,
+		transparent 100%
+	);
 }
