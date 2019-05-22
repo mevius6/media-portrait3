@@ -72,11 +72,11 @@ h1,
 h2 {
 	margin: 2.75rem 0 1rem;
 	font-weight: 400;
-	line-height: 1.15;
 	color: var(--color-hd);
 }
 h2 {
 	font-size: var(--fs-h2);
+	line-height: 1.15;
 }
 
 .page__header {
@@ -91,7 +91,6 @@ h2 {
 }
 .page__header > .title {
 	font-size: var(--fs-h1);
-	max-width: var(--col-max-w);
 	word-wrap: break-word;
 	color: var(--color-hd);
 }
@@ -99,10 +98,10 @@ h2 {
 	font-family: Nostra-Stream;
 	color: var(--color-bd);
 }
+/*
 .page__header .title::first-line {
 	text-transform: uppercase;
-	color: var(--color-bd);
-}
+}*/
 
 .page__content {
 	margin: 0 auto;
